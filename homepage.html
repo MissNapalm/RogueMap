@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RogueHunter</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f8f9fa;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #cc0000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-image {
+            height: auto;
+            width: auto;
+            max-height: 50px;
+            object-fit: contain;
+            vertical-align: middle;
+        }
+
+        .nav-logo:hover {
+            color: #ff0000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #ffeeee;
+            color: #cc0000;
+        }
+
+        .nav-link.active {
+            background-color: #cc0000;
+            color: white;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 120px; /* Increased to account for larger logo */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .hero h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #cc0000;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff0000;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: #cc0000;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="RogueHunter Logo" class="logo-image">
+                RogueHunter
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="crime_map.html" class="nav-link">Crime Map</a>
+                <a href="#" class="nav-link">Statistics</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Explore Chicago Crime Data</h1>
+            <p>
+                Interactive visualization tools and comprehensive analysis of crime patterns
+                across Chicago. Use our advanced mapping system to understand crime distribution
+                and trends throughout the city.
+            </p>
+            <a href="crime_map.html" class="cta-button">View Crime Map</a>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Interactive Map</h3>
+                <p>Explore crime incidents with our interactive map featuring multiple visualization modes, including point clusters and heatmaps.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Filter & Analysis</h3>
+                <p>Filter data by year and crime type. View detailed statistics including total crimes and arrest rates for each category.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Real-time Updates</h3>
+                <p>Access the latest available crime data with regular updates from official Chicago police records.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
